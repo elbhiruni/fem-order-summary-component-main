@@ -1,0 +1,236 @@
+/* Colors */
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+
+/* Boilerplate */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 1rem;
+  font-family: "Red Hat Display", sans-serif;
+  line-height: 1.5;
+  background-color: var(--paleBlue);
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a,
+a:active,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Style */
+.container {
+  /* padding-top: 4.375rem; 70px */
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 20.625rem; /* 330px */
+  height: auto;
+  background-color: #fff;
+  border-radius: 1.25rem; /* 20px */
+  overflow: hidden;
+  box-shadow: 0 50px 40px -20px hsla(224, 23%, 55%, 0.3);
+}
+
+.card-image {
+  height: 9.375rem; /* 150px */
+  /* background-image: url("images/illustration-hero.svg");
+  background-size: cover;
+  background-position: center; */
+}
+
+.card-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.3125rem 1.625rem; /* 37px 26px */
+}
+
+.card-order h1 {
+  font-size: 1.4375rem; /* 23px */
+  color: var(--darkBlue);
+}
+
+.card-order p {
+  font-size: 1rem; /* 16px */
+  text-align: center;
+  color: var(--desaturatedBlue);
+  margin: 1.25rem 0; /* 20px 0 */
+}
+
+.card-order-plan {
+  width: 17.5rem; /* 280px */
+  height: 5rem; /* 80px */
+  padding: 0 0.9375rem; /* 0 15px */
+  border-radius: 0.625rem; /* 10px */
+  background-color: var(--veryPaleBlue);
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+.card-order-plan .music-icon {
+  width: 3.125rem; /* 50px */
+  height: 3.125rem; /* 50px */
+  background-image: url("images/icon-music.svg");
+  background-repeat: no-repeat;
+  margin-right: 1.25rem; /* 20px */
+}
+
+.card-order-plan .annual-plan h2 {
+  font-size: 0.875rem; /* 14px */
+}
+
+.card-order-plan .annual-plan span {
+  font-size: 0.875rem; /* 14px */
+  /* font-weight: bold; */
+  color: var(--desaturatedBlue);
+}
+
+.card-order-plan a {
+  font-size: 0.8125rem; /* 13px */
+  font-weight: bold;
+  line-height: 1.3;
+  color: var(--brightBlue) !important;
+  margin-left: auto;
+  margin-right: 0;
+  border-bottom: 1px solid;
+}
+
+.card-order-plan a:hover {
+  color: hsla(245, 75%, 52%, 0.7) !important;
+  border: none;
+}
+
+.card-order button {
+  min-width: 17.5rem; /* 280px */
+  height: 3.125rem; /* 50px */
+  background-color: var(--brightBlue);
+  border-radius: 0.625rem; /* 10px */
+  color: var(--veryPaleBlue);
+  cursor: pointer;
+  font-size: 0.96875rem; /* 15.5px */
+  font-weight: bold;
+  margin-top: 1.25rem; /* 20px */
+  margin-bottom: 1.75rem; /* 28px */
+  box-shadow: 0 1.25rem 1.25rem 0 hsla(245, 75%, 52%, 0.3);
+}
+
+.card-order button:hover {
+  background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.card-order a {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: bold;
+  color: var(--desaturatedBlue);
+}
+
+.card-order a:hover {
+  color: var(--darkBlue);
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.625rem; /* 10px */
+  opacity: 0;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+/* Breakpoints */
+/* min: 1024px = 64em */
+@media screen and (min-device-width: 64em) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+
+  /* .container {
+    padding-top: 50px;
+  } */
+
+  .card {
+    width: 28.125rem; /* 450px */
+  }
+
+  .card-image {
+    height: 13.75rem; /* 220px */
+  }
+
+  .card-order {
+    padding: 2.5rem; /* 40px */
+  }
+
+  .card-order h1 {
+    font-size: 1.8125rem; /* 29px */
+  }
+
+  .card-order p {
+    font-size: 1.03125rem; /* 16.5px */
+  }
+
+  .card-order-plan {
+    width: 21.875rem; /* 350px */
+    height: 6.25rem; /* 100px */
+  }
+
+  .card-order-plan .annual-plan h2,
+  .card-order-plan .annual-plan span {
+    font-size: 1rem; /* 16px */
+  }
+
+  .card-order-plan a {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .card-order button {
+    width: 21.875rem; /* 350px */
+  }
+}
